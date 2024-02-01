@@ -25,7 +25,7 @@ class UsdRate
     private string $currency;
 
     #[ORM\Column(type: 'decimal', precision: 16, scale: 8)]
-    private float $rate;
+    private string $rate;
 
     #[ORM\Column(type: 'datetime')]
     private DateTimeInterface $timestamp;
@@ -47,12 +47,12 @@ class UsdRate
         return $this;
     }
 
-    public function getRate(): ?float
+    public function getRate(): ?string
     {
         return $this->rate;
     }
 
-    public function setRate(float $rate): static
+    public function setRate(string $rate): static
     {
         $this->rate = $rate;
 

@@ -54,7 +54,7 @@ class ExchangeRateRepository extends ServiceEntityRepository
             $exchangeRate->setProvider($provider);
         }
 
-        $exchangeRate->setRate($rate);
+        $exchangeRate->setRate((string) $rate);
         $exchangeRate->setTimestamp(new \DateTime());
 
         $em->persist($exchangeRate);

@@ -51,7 +51,7 @@ class UsdRateRepository extends ServiceEntityRepository
             $usdRate->setCurrency($currency);
         }
 
-        $usdRate->setRate($rate);
+        $usdRate->setRate((string) $rate);
         $usdRate->setTimestamp(new \DateTime());
 
         $em->persist($usdRate);

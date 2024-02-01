@@ -20,5 +20,9 @@
 
 ## Использование
 
-- **Импорт курсов валют:** Запустите `docker-compose exec app php bin/console app:import-exchange-rates`.
-- **Конвертация валют:** Посетите `http://localhost:8000/` в вашем браузере.
+- **Импорт курсов валют:** 
+  - `docker-compose exec app php bin/console app:import-exchange-rates`.
+- **Конвертация валют:** 
+  - Откройте `http://localhost:8000/` в вашем браузере.
+
+> Для добавления нового провайдера, достаточно создать подкласс от `AbstractExchangeRateProvider` и зарегистрировать в `config/services.yaml` 
