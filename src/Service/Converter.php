@@ -26,6 +26,6 @@ class Converter
         $source = $this->rateRepository->getByCurrency($conversionDTO->fromCurrency);
         $target = $this->rateRepository->getByCurrency($conversionDTO->toCurrency);
 
-        return $target->getRate() / $source->getRate();
+        return ($target->getRate() / $source->getRate()) * $conversionDTO->amount;
     }
 }
